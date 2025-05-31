@@ -20,7 +20,6 @@ const quoteText = document.getElementById("quote");
 const authorText = document.getElementById("author");
 const button = document.getElementById("new-quote");
 
-    // Show initial quote
     let lastIndex = Math.floor(Math.random() * quotes.length);
     showQuote(lastIndex);
 
