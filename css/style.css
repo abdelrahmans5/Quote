@@ -1,0 +1,34 @@
+/* ----------------------General---------------------- */
+
+* *::after *::before{
+    box-sizing: border-box;
+}
+
+/* ----------------------Style---------------------- */
+
+body {
+    background: linear-gradient(to right, #fff 0%, #085f88 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.quote-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    max-width: 600px;
+    text-align: center;
+}
+.quote-text {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+.quote-author {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 20px;
+}
