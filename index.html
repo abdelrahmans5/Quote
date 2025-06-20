@@ -3,20 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quote-1</title>
+    <title>Bookmark-1</title>
 
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container">
-    <div class="quote-box mx-auto">
-        <h1 class="mb-4">Quote of the Day</h1>
-        <p id="quote" class="quote-text"></p>
-        <p id="author" class="quote-author"></p>
-        <button id="new-quote" class="btn btn-primary">Get New Quote</button>
-    </div>
+    <div class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-primary">📚 My Bookmarks</h1>
+            <p class="text-muted">Organize and access your favorite websites easily</p>
+        </div>
+
+        <div class="card p-4 mb-4 fade-in">
+            <div class="row g-3">
+                <div class="col-md-5">
+                    <input type="text" id="bookmarkName" class="form-control" placeholder="Enter Website Name" />
+                </div>
+                <div class="col-md-5">
+                    <input type="url" id="bookmarkURL" class="form-control" placeholder="https://example.com" />
+                </div>
+                <div class="col-md-2 d-grid">
+                    <button onclick="addBookmark()" id="addBookmark" class="btn btn-primary">Add</button>
+                </div>
+                <div class="col-12">
+                    <small id="urlError" class="text-danger d-none">Please enter a valid URL that starts with http:// or https://</small>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-hover table-bordered text-center fade-in">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th> <!-- NEW COLUMN -->
+                    <th>Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="bookmarkList"></tbody>
+        </table>
     </div>
 
     <script src="js/bootstrap.min.js"></script>
